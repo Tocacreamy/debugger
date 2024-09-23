@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debug</title>
+  </head>
+  <body>
+    <script>
+      //json file
+      let text =
+        '{ "employees" : [' +
+        '{ "firstName":"John" , "lastName":"Doe" },' +
+        '{ "firstName":"Anna" , "lastName":"Smith" },' +
+        '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+      let source = {};
+
+      const obj = JSON.parse(text); //ubah json ke array
+      Object.assign(obj, source); // gabungin data dari source ke text
+
+      const tojson = JSON.stringify(obj); //ubah array ke json
+
+      //debugger
+      console.log(obj);
+      console.log(tojson);
+      console.table(obj);
+    </script>
+  </body>
+</html>
